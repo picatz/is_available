@@ -29,7 +29,7 @@ IsAvailable.resolvable?("www-facebook.com")
 
 ```shell
 > is_available --check www-facebook.com
-www-facebook.com isn't available!
+www-facebook.com is not available!
 > is_available --check wwwwww-facebook.com
 www-facebook.com is available!
 > is_available --registered --true-or-false www-facebook.com

@@ -15,17 +15,17 @@ CommandLion::App.run do
 		description "Check if a given domain has been found to be registered ( or not )."
 		type :string
     action do
-      check = IsAvailable.registered?(argument)
+      check = IsAvailable.available?(argument)
       if options[:true_or_false].given?
         puts check
       else
         if check
-          puts "#{argument} is not available!"
-        else
           puts "#{argument} is available!"
+        else
+          puts "#{argument} is not available!"
         end
       end
-      exit 1 if check; exit 0
+      exit 0 if check; exit 1
 		end
 
     option :true_or_false do
