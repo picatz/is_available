@@ -16,6 +16,6 @@ module IsAvailable
   end
 
   def self.available?(domain)
-    return false if IsAvailable.registered?(domain); true
+    !IsAvailable.registered?(domain)
   end
 end
