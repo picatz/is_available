@@ -1,4 +1,4 @@
-# IsAvailable
+# 🙈  Is Available
 
 Simply check if a domain has been registered ( or if it is resolvable ) to determine if it's available.
 
