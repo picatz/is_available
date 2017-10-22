@@ -14,4 +14,8 @@ module IsAvailable
   rescue Resolv::ResolvError
     return false
   end
+
+  def self.available?(domain)
+    return false if IsAvailable.registered?(domain); true
+  end
 end

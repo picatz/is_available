@@ -1,6 +1,6 @@
 # IsAvailable
 
-Simply check if a domain has been registered ( or if it is resolvable ).
+Simply check if a domain has been registered ( or if it is resolvable ) to determine if it's available.
 
 ## Installation
 
@@ -14,6 +14,9 @@ When you install `is_available` you install a Ruby library and command-line appl
 
 ```ruby
 require "is_available"
+
+IsAvailable.available?("www-facebook.com")
+# => false
 
 IsAvailable.registered?("www-facebook.com")
 # => true
@@ -29,27 +32,7 @@ IsAvailable.resolvable?("www-facebook.com")
 www-facebook.com isn't available!
 > is_available --check wwwwww-facebook.com
 www-facebook.com is available!
-```
-
-```shell
-> is_available --registered www-facebook.com
-www-facebook.com is registered!
 > is_available --registered --true-or-false www-facebook.com
-true
-> is_available --registered wwwww-facebook.com
-www-facebook.com isn't registered!
-> is_available --registered --true-or-false wwwww-facebook.com
-false
-```
-
-```shell
-> is_available --resolvable www-facebook.com
-www-facebook.com isn't resolvable!
-> is_available ---resolvable --true-or-false www-facebook.com
-false
-> is_available --resolvable wwwww-facebook.com
-www-facebook.com isn't resolvable!
-> is_available ---resolvable --true-or-false wwwww-facebook.com
 false
 ```
 
