@@ -7,7 +7,7 @@ require 'command_lion'
 CommandLion::App.run do
 
 	name "is_available"
-	description "Simply check if a domain has been registered ( or if it is resolvable ) to determine if it's available."
+	description "Simply check if a domain has been registered to determine if it's available."
 	version IsAvailable::VERSION
 
 	command :check do
