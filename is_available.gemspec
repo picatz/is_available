@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Kent 'picat' Gruber"]
   spec.email         = ["kgruber1@emich.edu"]
 
-  spec.summary       = %q{Simply check if a domain is available to be registered.}
+  spec.summary       = %q{Simply check if a domain has been registered ( or if it is resolvable ) to determine if it's available.}
   #spec.description   = %q{TODO: Write a longer description or delete this line.}
   spec.homepage      = "https://github.com/picatz/is_available"
   spec.license       = "MIT"
