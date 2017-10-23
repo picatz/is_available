@@ -19,7 +19,6 @@ Gem::Specification.new do |spec|
   spec.executable    = "is_available"
   spec.require_paths = ['lib']
   
-  spec.add_dependency "unirest"
   spec.add_dependency "command_lion"
 
   spec.add_development_dependency "bundler", "~> 1.15"

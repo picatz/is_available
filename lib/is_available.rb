@@ -1,4 +1,4 @@
-require "unirest"
+require "net/http"
 require "resolv"
 require "is_available/version"
 
@@ -6,7 +6,7 @@ module IsAvailable
   WHOIS_DOT_COM_LINK = "https://www.whois.com/whois/"
   
   def self.registered?(domain)
-    Unirest.get(WHOIS_DOT_COM_LINK+domain).body.include?("Registrar")
+    Net::HTTP.get_response(URI.parse(WHOIS_DOT_COM_LINK+domain)).body.include?("Registrar")
   end
 
   def self.resolvable?(domain)
